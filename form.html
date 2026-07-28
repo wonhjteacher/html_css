@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <div id="order">
+      <form action="/order" method="post">
+        <fieldset>
+          <legend>배송지</legend>
+          <div class="row">
+            <div class="field">
+              <label for="username">받는분</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="홍길동"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="usertel">연락처</label>
+              <input
+                type="tel"
+                id="usertel"
+                name="usertel"
+                placeholder="010-0000-0000"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="zip">우편번호</label>
+              <input type="text" id="zip" name="zip" />
+            </div>
+            <div class="field">
+              <label for="addr">주소</label>
+              <input type="text" id="addr" name="addr" />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
