@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: 24px;
+        color: #26e5ce;
+      }
+      .a1 {
+        font-size: 30px;
+        color: #e8a107;
+        border: 2px solid red;
+      }
+      #a2 {
+        font-size: 12px;
+        color: #2649e5;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      #a3 {
+        font-size: 80px;
+      }
+      /*
+      인라인 > 내부스타일 > 외부스타일 
+      아이디 > 클래스 > 태그 
+     */
+      .box1 {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+        margin: 20px 60px 100px 50px;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="a3">가장중요한제목</h1>
+    <h2 class="a1">중요도</h2>
+    <h6>가장작은제목</h6>
+    <p>문단태그 <br />줄바꿈 태그</p>
+    <ul class="a1">
+      <li>
+        <a href="#">링크</a>
+      </li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ol id="a2">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ol>
+    <dl>
+      <dt>타이틀</dt>
+      <dd>
+        <ul>
+          <li>목록</li>
+        </ul>
+      </dd>
+    </dl>
+    <div style="border: 1px solid red">
+      영역 <i>공간</i>을 <em>구분</em>하는 태그
+    </div>
+    <div class="box1">박스1</div>
+  </body>
+</html>
