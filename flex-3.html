@@ -1,53 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-       .wrap{
-        width: 600px;height:40px;
-        background-color:#666;
+      .wrap {
+        width: 600px;
+        height: 40px;
+        background-color: #666;
         margin-top: 50px;
-       }
+        display: flex;
+      }
 
-       .wrap>div:nth-child(1){background-color: red;}
-       .wrap>div:nth-child(2){background-color: green;}
-       .wrap>div:nth-child(3){background-color: blue;}
-       .wrap1>div{width: 100px;}
-       .wrap2>div{width: 300px;}
-       .wrap3>div{width: 400px;}
-       .wrap4{width: 800px;}
-       .wrap4>div{width: 300px;}
-       .wrap5>div{flex-basis: 0;}
+      .wrap > div:nth-child(1) {
+        background-color: red;
+      }
+      .wrap > div:nth-child(2) {
+        background-color: green;
+      }
+      .wrap > div:nth-child(3) {
+        background-color: blue;
+      }
+      .wrap1 > div {
+        width: 100px;
+      }
+      .wrap1 > div:nth-child(1) {
+        flex-grow: 2;
+      }
+      .wrap1 > div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .wrap1 > div:nth-child(3) {
+        flex-grow: 1;
+      }
+      .wrap2 > div {
+        width: 300px;
+      }
+      .wrap2 > div:nth-child(1) {
+        flex-shrink: 2;
+      }
+      .wrap2 > div:nth-child(2) {
+        flex-shrink: 1;
+      }
+      .wrap2 > div:nth-child(3) {
+        flex-shrink: 1;
+      }
+      .wrap3 > div {
+        width: 400px;
+      }
+      .wrap4 {
+        width: 800px;
+      }
+      .wrap4 > div {
+        width: 300px;
+      }
+      .wrap5 > div {
+        flex-basis: 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- div.wrap$*4>div.box*3 -->
     <div class="wrap1 wrap">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box"></div>
+      <!--100+(300/4)*2 = 250-->
+      <div class="box"></div>
+      <!--100+(300/4)*1 = 175-->
+      <div class="box"></div>
+      <!--100+(300/4)*1 = 175-->
     </div>
     <div class="wrap2 wrap">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box"></div>
+      <!--300-((300/4)*2)=150-->
+      <div class="box"></div>
+      <!--300-((300/4)*1)=225-->
+      <div class="box"></div>
+      <!--300-((300/4)*1)=225-->
     </div>
     <div class="wrap3 wrap">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
     <div class="wrap4 wrap">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
     <div class="wrap5 wrap">
-        <div class="box">박스</div>
-        <div class="box">박스 박스</div>
-        <div class="box">박스</div>
+      <div class="box">박스</div>
+      <div class="box">박스 박스</div>
+      <div class="box">박스</div>
     </div>
-</body>
+  </body>
 </html>
